@@ -12,16 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import sys
 import setuptools
 
-
-if sys.version_info[:2] < (3, 7):
-    raise RuntimeError("Python version >= 3.7 required.")
 
 setuptools.setup(
     name="bluecellulab",
     use_scm_version=True,
+    python_requires='>=3.8',
     setup_requires=['setuptools_scm'],
     packages=setuptools.find_packages(include=['bluecellulab', 'bluecellulab.*']),
     author="Blue Brain Project, EPFL",
